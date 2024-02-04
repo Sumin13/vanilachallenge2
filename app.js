@@ -8,8 +8,11 @@ let numberValue;
 
 function chosenNumber(event) {
   event.preventDefault();
+  firstNumberChose.classList.add("numberhide");
   numberValue = firstNumberChose.value;
+
   localStorage.setItem("number", numberValue);
+  document.querySelector("h3#shownumber").innerText = numberValue;
 }
 
 function generateRandomNumber() {
