@@ -10,7 +10,6 @@ function chosenNumber(event) {
   event.preventDefault();
   firstNumberChose.classList.add("numberhide");
   numberValue = firstNumberChose.value;
-
   localStorage.setItem("number", numberValue);
   document.querySelector("h3#shownumber").innerText = numberValue;
 }
@@ -31,5 +30,6 @@ function gameResult(event) {
     resultValue.innerText = `Wrong! You chose ${secondNumber} and computer chose ${numberValue}`;
   }
 }
+
 firstNumber.addEventListener("submit", chosenNumber);
 youChoose.addEventListener("submit", gameResult);
