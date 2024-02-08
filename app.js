@@ -23,7 +23,8 @@ const computerGen = generateRandomNumber();
 function gameResult(event) {
   event.preventDefault();
   const secondNumber = finalNumber.value;
-
+  finalNumber.classList.add("numberhide");
+  document.querySelector("h3#showsecond").innerText = secondNumber;
   if (parseInt(secondNumber, 10) === parseInt(numberValue, 10)) {
     resultValue.innerText = "You won!";
   } else {
